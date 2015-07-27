@@ -1,0 +1,18 @@
+
+
+<div ng-controller="ImageSearch">
+
+    <form role="form" ng-submit="submit()">
+        <div  class="search-class" >
+            <input ng-model="searchCriteria" />
+            <button type="submit">Search</button>
+        </div>
+    </form>
+    <div class="image-style" ng-repeat="image in images track by $id(image)">
+        <img ng-src="{{appSettings.serverPath}}api/Image/GetPhoto?href={{image}}" alt="">
+    </div>
+</div>
+
+
+
+
